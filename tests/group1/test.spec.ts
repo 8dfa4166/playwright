@@ -1,5 +1,15 @@
 import { test, expect } from '@playwright/test';
 
+test.describe('スキップするテスト', () => {
+  test.skip('スキップされたテスト', async ({ page }) => {
+    // ...
+  });
+
+  test.fixme('to be fixed', async ({ page }) => {
+    // ...
+  });
+});
+
 test.describe('リクエストを実行する', () => {
   test('1回目', async ({ page }) => {
     await test.step("ステップ1", async () => {
